@@ -15,7 +15,7 @@ inputs:
     required: true
 
 runs:
-  using:
+  using: "composite"
   steps:
   - uses: actions/checkout@v3
     name: Build and Publish Docker Image
