@@ -19,7 +19,9 @@ runs:
   steps:
   - uses: actions/checkout@v3
     name: Checkout
+    shell: bash
   - name: Build and Publish Docker Image
+    shell: bash
     run: |
       docker build --tag bossanova456/${{inputs.app-name}} bossanova456/${{inputs.app-name}}:${{inputs.version}} .
       docker login -u bossanova456 -p ${{inputs.token}}
